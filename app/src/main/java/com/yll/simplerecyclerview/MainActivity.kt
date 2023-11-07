@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.yll.simplerecyclerview.data.Flower
 
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val recyclerView: RecyclerView = findViewById(R.id.flower_recycler_view)
+        recyclerView.layoutManager = LinearLayoutManager(this)
         val flowerListAdapter = FlowerAdapter { flower -> adapterOnClick(flower) }
         recyclerView.adapter = flowerListAdapter
 
