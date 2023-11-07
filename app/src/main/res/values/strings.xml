@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">SimpleRecyclerView</string>
+
+    <string name="add_flower">Add flower</string>
+    <string name="delete_flower">Delete flower</string>
+
+    <string name="flower_name1">daffodil</string>
+    <string name="flower_name2">dahlia</string>
+    <string name="flower_name3">daisy</string>
+    <string name="flower_name4">freesia</string>
+    <string name="flower_name5">lilac</string>
+    <string name="flower_name6">lily</string>
+    <string name="flower_name7">marigold</string>
+    <string name="flower_name8">peony</string>
+    <string name="flower_name9">poppy</string>
+    <string name="flower_name10">rose</string>
+    <string name="flower_name11">sunflower</string>
+    <string name="flower_name12">tulip</string>
+
+    <string name="flower_image_description">This is a flower image description</string>
+
 </resources>
