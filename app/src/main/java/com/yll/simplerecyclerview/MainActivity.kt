@@ -8,9 +8,11 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentContainerView
+import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.yll.simplerecyclerview.data.Flower
+import com.yll.simplerecyclerview.header.HeaderAdapter
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,14 +24,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val headerAdapter = HeaderAdapter()
         val recyclerView: RecyclerView = findViewById(R.id.flower_recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
         val flowerListAdapter = FlowerAdapter { flower -> adapterOnClick(flower) }
-        recyclerView.adapter = flowerListAdapter
+        val concatAdapter = ConcatAdapter(headerAdapter, flowerListAdapter)
+        recyclerView.adapter = concatAdapter
 
         flowerListViewModel.flowerLiveData.observe(this) {
             it?.let {
-               flowerListAdapter.submitList(it as MutableList<Flower>)
+                flowerListAdapter.submitList(it as MutableList<Flower>)
+                headerAdapter.updateFlowerCount(it.size)
             }
         }
 
