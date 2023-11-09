@@ -36,10 +36,10 @@ fun initFlowerList(resources: Resources): List<Flower> {
     val flowerList = mutableListOf<Flower>()
     for (i in flowerNameList.indices) {
         flowerList.add(Flower(i.toLong(),
-            flowerNameList[flowerNameList.indices.random()],
-            flowerImageList[flowerImageList.indices.random()],
-            flowerDescriptionList[flowerDescriptionList.indices.random()])
-        )
+            flowerNameList[i],
+            flowerImageList[i],
+            flowerDescriptionList[i]
+        ))
     }
 
     return flowerList

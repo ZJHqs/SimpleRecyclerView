@@ -17,6 +17,22 @@
     <string name="flower_name11">sunflower</string>
     <string name="flower_name12">tulip</string>
 
-    <string name="flower_image_description">This is a flower image description</string>
+    <string name="flower_description1">Daffodils are referred to as Lent Lilies in England.</string>
+    <string name="flower_description2">Dahlia is named after the Swedish botanist Anders Dah.</string>
+    <string name="flower_description3">Daisies are cousins with Sunflowers.</string>
+    <string name="flower_description4">Freesias bloom during spring and are native to Africa.</string>
+    <string name="flower_description5">Lilacs belong to the olive family.</string>
+    <string name="flower_description6">Lilies have the longest in vase lifespan of any cut bloom.</string>
+    <string name="flower_description7">Marigolds come in orange, reed, maroon and yellow.</string>
+    <string name="flower_description8">Peony plants can live to be 100 years old.</string>
+    <string name="flower_description9">Poppies can be over 3 feet tall.</string>
+    <string name="flower_description10">Rose comes from the Latin word Rosa. There are over 100 species of the rose.</string>
+    <string name="flower_description11">Mature Sunflowers face east and are native too the United States.</string>
+    <string name="flower_description12">There are over 150 species of tulips.</string>
+
+
+    <string name="flower_image_description">This is a flower image</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

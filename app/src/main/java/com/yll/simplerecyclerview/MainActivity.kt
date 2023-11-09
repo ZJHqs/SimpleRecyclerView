@@ -1,10 +1,13 @@
 package com.yll.simplerecyclerview
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentContainerView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.yll.simplerecyclerview.data.Flower
@@ -42,6 +45,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun adapterOnClick(flower: Flower) {
-        Toast.makeText(this, flower.description, Toast.LENGTH_SHORT).show()
+        val flowerDetailFragment = FlowerDetailFragment.newInstance(flower.name, flower.description, flower.image)
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.flower_detail_fragment, flowerDetailFragment)
+            .addToBackStack(null)
+            .commit()
     }
 }
